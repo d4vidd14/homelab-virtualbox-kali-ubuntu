@@ -10,4 +10,9 @@ Enabled a realistic service for enumeration:
 - Installed and started OpenSSH server (port 22/tcp)
 
 ### Result
-Re-ran Nmap service/version detection to identify exposed services and versions for further enumeration and hardening.
+### Finding
+- **22/tcp open** — SSH service detected
+- **Version:** OpenSSH 9.6p1 (Ubuntu package 3ubuntu13.14)
+
+### Why it matters
+SSH is a common remote administration service and a typical enumeration/hardening target. Version detection helps identify configuration issues and potential vulnerabilities (in a controlled lab).
