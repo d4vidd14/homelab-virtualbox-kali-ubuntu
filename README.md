@@ -1,39 +1,42 @@
 # homelab-virtualbox-kali-ubuntu
 Reproducible VirtualBox cybersecurity homelab with Kali Linux and Ubuntu: NAT + Host-Only networking, baseline snapshots, shared folders, and lab-ready documentation.
-
 # VirtualBox Cybersecurity Homelab (Kali + Ubuntu)
 
 This repository documents my local cybersecurity homelab built with VirtualBox.  
-It is designed to practice safely in an isolated environment while keeping the setup reproducible and portfolio-ready.
-
-## Lab Goals
-- Build a safe, isolated environment for learning ethical hacking and basic blue-team tasks
-- Use clean baselines (snapshots) to reset quickly after experiments
-- Keep every step documented so the lab can be reproduced on another machine
+The goal is to practice safely in an isolated environment and keep everything reproducible for portfolio/CV use.
 
 ## Environment
-- Host OS: Windows 11
-- Virtualization: VirtualBox
+- Host OS: Windows 11 (16 GB RAM)
+- Hypervisor: Oracle VirtualBox
 - VMs:
   - Kali Linux (attacker / tooling)
-  - Ubuntu (target / defender)
+  - Ubuntu Desktop (target / defender)
 
 ## Network Topology
 Each VM uses **two network adapters**:
 
-1) **Adapter 1: NAT**
-- Purpose: Internet access for updates/tools
-- Notes: Not used for attacking other machines
+### Adapter 1 — NAT (Internet)
+Used only for:
+- system updates
+- downloading tools
 
-2) **Adapter 2: Host-Only**
-- Purpose: Isolated lab network (Kali ↔ Ubuntu)
-- Notes: All security testing happens only on this network
+### Adapter 2 — Host-Only (Lab Network)
+Used for:
+- Kali ↔ Ubuntu communication
+- scanning/testing **only inside the lab**
 
-Example Host-Only subnet (typical VirtualBox default): `192.168.56.0/24`
+## Current IP Addresses
+> Use the **Host-Only** IPs for ping, nmap, ssh, etc.
 
-## Quick Checks
-### On Kali
+| Machine | NAT (Internet) | Host-Only (Lab) |
+|--------|------------------|-----------------|
+| Ubuntu | `10.0.2.15` | `192.168.56.102` |
+| Kali  | (run `hostname -I`) | (run `hostname -I`) |
+
+## Verification Commands
+### Check IPs
+On both machines:
 ```bash
+hostname -I
 ip a
 ip r
-ping -c 2 1.1.1.1
