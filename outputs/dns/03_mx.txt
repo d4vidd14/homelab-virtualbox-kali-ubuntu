@@ -1,0 +1,1 @@
+google.com.		257	IN	MX	10 smtp.google.com.

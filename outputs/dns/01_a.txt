@@ -1,0 +1,2 @@
+example.com.		225	IN	A	104.18.27.120
+example.com.		225	IN	A	104.18.26.120

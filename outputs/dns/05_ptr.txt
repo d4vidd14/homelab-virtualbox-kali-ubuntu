@@ -1,0 +1,1 @@
+1.1.1.1.in-addr.arpa.	1183	IN	PTR	one.one.one.one.
