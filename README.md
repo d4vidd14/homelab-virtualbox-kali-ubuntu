@@ -42,6 +42,10 @@ ip r
  
 
 ## Labs
+
+- [Lab 02 — DNS basics (dig)](docs/lab02-dns.md)
+  - Evidence: `outputs/dns/`
+
 - [Lab 03 — Nmap Scanning (Host-Only)](docs/lab03-nmap.md)
   - Enabled OpenSSH on Ubuntu and performed service/version detection with Nmap.
   - Evidence: `outputs/nmap/03_services_versions.txt`
