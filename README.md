@@ -38,7 +38,8 @@ To check the current IPs on any VM:
 hostname -I
 ip a
 ip r
-
+```
+ 
 
 ## Labs
 - [Lab 03 — Nmap Scanning (Host-Only)](docs/lab03-nmap.md)
