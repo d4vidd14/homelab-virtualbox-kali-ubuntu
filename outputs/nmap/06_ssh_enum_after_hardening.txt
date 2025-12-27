@@ -1,0 +1,54 @@
+# Nmap 7.98 scan initiated Sat Dec 27 12:35:23 2025 as: /usr/lib/nmap/nmap -p 22 -sV -Pn --script ssh-hostkey,ssh2-enum-algos -oN /home/kali/lab_outputs/nmap/06_ssh_enum_after_hardening.txt 192.168.56.102
+Nmap scan report for 192.168.56.102
+Host is up (0.00077s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.14 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 23:7e:21:c2:48:ec:84:92:10:0d:2b:39:c8:ea:d1:99 (ECDSA)
+|_  256 8d:f8:0d:8b:99:b0:a5:a3:a2:df:b1:02:2c:d2:bf:c4 (ED25519)
+| ssh2-enum-algos: 
+|   kex_algorithms: (12)
+|       sntrup761x25519-sha512@openssh.com
+|       curve25519-sha256
+|       curve25519-sha256@libssh.org
+|       ecdh-sha2-nistp256
+|       ecdh-sha2-nistp384
+|       ecdh-sha2-nistp521
+|       diffie-hellman-group-exchange-sha256
+|       diffie-hellman-group16-sha512
+|       diffie-hellman-group18-sha512
+|       diffie-hellman-group14-sha256
+|       ext-info-s
+|       kex-strict-s-v00@openssh.com
+|   server_host_key_algorithms: (4)
+|       rsa-sha2-512
+|       rsa-sha2-256
+|       ecdsa-sha2-nistp256
+|       ssh-ed25519
+|   encryption_algorithms: (6)
+|       chacha20-poly1305@openssh.com
+|       aes128-ctr
+|       aes192-ctr
+|       aes256-ctr
+|       aes128-gcm@openssh.com
+|       aes256-gcm@openssh.com
+|   mac_algorithms: (10)
+|       umac-64-etm@openssh.com
+|       umac-128-etm@openssh.com
+|       hmac-sha2-256-etm@openssh.com
+|       hmac-sha2-512-etm@openssh.com
+|       hmac-sha1-etm@openssh.com
+|       umac-64@openssh.com
+|       umac-128@openssh.com
+|       hmac-sha2-256
+|       hmac-sha2-512
+|       hmac-sha1
+|   compression_algorithms: (2)
+|       none
+|_      zlib@openssh.com
+MAC Address: 08:00:27:4C:33:00 (Oracle VirtualBox virtual NIC)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec 27 12:35:24 2025 -- 1 IP address (1 host up) scanned in 0.87 seconds
