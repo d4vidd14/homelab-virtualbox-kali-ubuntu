@@ -49,7 +49,10 @@ ip r
 - [Lab 03 — Nmap Scanning (Host-Only)](docs/lab03-nmap-summary.md)
   - Enabled OpenSSH on Ubuntu and performed service/version detection with Nmap.
   - Evidence: `outputs/nmap/03_services_versions.txt`
-  
+
 - [Lab 04 — SSH Enumeration + Basic Hardening](docs/lab04-ssh-enum.md)
   - Evidence: `outputs/nmap/06_ssh_enum.txt`, `outputs/nmap/08_ssh_enum_after_hardening.txt`
 
+- [Lab 04.1 — Netcat Enumeration (Metasploitable2)](docs/lab04.1-netcat-enumeration.md)  
+  - Performed a TCP port sweep with netcat and manual HTTP interaction (banner grabbing + basic requests).  
+  - Evidence: `outputs/netcat/`
