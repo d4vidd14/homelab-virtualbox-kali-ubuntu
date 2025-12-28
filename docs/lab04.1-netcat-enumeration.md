@@ -40,7 +40,7 @@ printf "GET / HTTP/1.0\r\nHost: 192.168.56.103\r\n\r\n" | nc -nv 192.168.56.103 
 ```
 
 ### Evidence
-- `outputs/netcat/02_http_get_root.txt`
+- `outputs/netcat/02_port_connect_80.txt`
 
 ### Notes
 - Some protocols (e.g., SMB on `139/445`) are binary and may not provide meaningful text output via netcat. For those, Nmap service detection and NSE scripts are usually a better fit.
